@@ -23,6 +23,12 @@ http://localhost:3000
 admin/admin
 ```
 
+## debug
+
+* http://localhost:9090/targets - shows status of monitored targets as seen from prometheus
+
+
+
 ## refs
 
 ### docker-compose stack

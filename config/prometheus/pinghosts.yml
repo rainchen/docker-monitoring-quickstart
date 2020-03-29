@@ -1,0 +1,11 @@
+# remember to restart the service if change this file
+# to check http status code value: http://localhost:9090/graph?g0.range_input=1h&g0.expr=probe_http_status_code&g0.tab=1
+- targets:  # url;humanname;routing;switch
+    # global Internet
+    - http://detectportal.firefox.com/success.txt;detectportal.firefox.com;external;internetbox
+    - http://captive.apple.com;captive.apple.com;external;internetbox
+    - http://www.msftconnecttest.com/connecttest.txt ;msftconnecttest.com;external;internetbox
+    # inner Internet
+    - http://baidu.com;baidu.com;external;internetbox
+    # outer Internet
+    - http://www.google.com/generate_204;google.com;external;internetbox

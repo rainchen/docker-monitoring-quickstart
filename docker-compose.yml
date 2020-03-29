@@ -52,3 +52,17 @@ services:
       - ./config/grafana/env_config
     ports:
      - "3000:3000"
+
+  # hosts config: config/prometheus/pinghosts.yml
+  # Grafana dashboard: config/grafana/provisioning/dashboards/internet connection-1585457374486.json
+  # http://localhost:9090/graph?g0.expr=probe_http_status_code&g0.tab=1 - shows prometheus value for `probe_http_status_code` for each host. You can edit/play with additional values. Useful to check everything is okey in prometheus (in case Grafana is not showing the data you expect).
+  internet-exporter:
+    image: prom/blackbox-exporter:latest
+    tty: true
+    stdin_open: true
+    volumes:
+      - ./config/blackbox/config:/config
+    command:
+      - '--config.file=/config/blackbox.yml'
+    expose:
+      - 9115
