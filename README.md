@@ -28,6 +28,10 @@ admin/admin
 * http://localhost:9090/targets - shows status of monitored targets as seen from prometheus
 
 
+## screenshots
+
+* dashboard for internet-exporter
+![](docs/imgs/screencapture-internet-connection.png)
 
 ## refs
 
