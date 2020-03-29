@@ -1,0 +1,5 @@
+# monitor all process
+process_names:
+  - name: "{{.Comm}}"
+    cmdline:
+    - '.+'
