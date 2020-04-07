@@ -58,6 +58,7 @@ services:
   # http://localhost:9090/graph?g0.expr=probe_http_status_code&g0.tab=1 - shows prometheus value for `probe_http_status_code` for each host. You can edit/play with additional values. Useful to check everything is okey in prometheus (in case Grafana is not showing the data you expect).
   internet-exporter:
     image: prom/blackbox-exporter:latest
+    container_name: monitoring_internet_exporter
     tty: true
     stdin_open: true
     volumes:
