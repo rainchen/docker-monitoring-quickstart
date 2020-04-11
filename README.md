@@ -8,6 +8,7 @@ a docker-compose quickstart for docker container and system monitoring
 * prometheus
 * node-exporter
 * cadvisor
+* blackbox-exporter
 * grafana
 
 ## setup
@@ -19,7 +20,7 @@ $ docker-compose up
 ## login
 
 ```
-http://localhost:3000
+http://localhost:30000
 admin/admin
 ```
 
