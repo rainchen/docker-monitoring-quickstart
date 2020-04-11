@@ -51,7 +51,7 @@ services:
     env_file:
       - ./config/grafana/env_config
     ports:
-     - "3000:3000"
+     - "30000:3000"
 
   # hosts config: config/prometheus/pinghosts.yml
   # Grafana dashboard: config/grafana/provisioning/dashboards/internet connection-1585457374486.json
